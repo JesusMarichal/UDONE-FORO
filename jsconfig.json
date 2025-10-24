@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "@/*": [
+                "./resources/js/*"
+            ]
+        }
+    },
+    "exclude": [
+        "vendor",
+        "node_modules"
+    ]
+}
