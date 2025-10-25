@@ -91,7 +91,16 @@ return [
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
-            'search_path' => 'public',
+            /*
+             | Usa DB_SCHEMA para definir el search_path (esquema) de PostgreSQL
+             | donde Laravel creará y buscará las tablas. El valor por defecto
+             | es 'public'.
+             |
+             | Si prefieres un esquema distinto (por ejemplo 'laravel'), puedes
+             | crear ese esquema en la base de datos o establecer DB_SCHEMA
+             | en tu archivo `.env` con el nombre del esquema deseado.
+             */
+            'search_path' => env('DB_SCHEMA', 'public'),
             'sslmode' => 'prefer',
         ],
 
